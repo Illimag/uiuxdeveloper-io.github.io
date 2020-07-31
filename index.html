@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-	<title>Redirect to Google Slide Portfolio.</title>
-	<meta charset="utf-8">
-	<meta content="width=device-width,initial-scale=1, user-scalable=no" name="viewport">
-<script type="text/javascript">
-document.location = "https://docs.google.com/presentation/d/e/2PACX-1vRrrF5k_VUsa7eGOrnRFeLUSi_l9YCe0_jyFIXe4gAjIjU4JaxLgJ3Qt_etEzDUtfEUlxJ2IWPb37CR/pub?start=false&loop=false&delayms=3000";
-</script>
+<title>iframe url redirect</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
 </head>
-<body></body>
+<body style="margin:0">
+
+
+<script type='text/javascript'>
+var mobile ='<iframe src="mobile.html" allowTransparency="true" scrolling="yes" frameborder="0" height="100%" width="100%"  style="display:block;position:absolute;"></iframe>';
+var desktop = '<iframe src="desktop.html" allowTransparency="true" scrolling="yes" frameborder="0" height="100%" width="100%"  style="display:block;position:absolute;"></iframe>';
+var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+if ( w < 768){
+document.write (mobile)
+}else{
+document.write (desktop)
+}
+</script> 
+
+</body>
 </html>
